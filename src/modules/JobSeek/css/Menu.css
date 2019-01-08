@@ -1,0 +1,80 @@
+.menu-design {
+  font-size: 17px;
+  text-transform: capitalize !important;
+  font-weight: normal;
+  padding: 4px;
+  color: #737373;
+}
+
+.bar {
+  font-size: 17px;
+  color: #737373;
+}
+
+.notify-bell {
+  margin-left: 12px;
+  margin-right: 14px;
+  color: grey;
+}
+
+/* .search-bar {
+  color: white;
+  font-size: 16px;
+  display: inline;
+} */
+
+.dropdown {
+  display: inline-block;
+}
+
+.list {
+  display: inline-flex;
+}
+
+.list-margin {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+
+a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-design:hover .profile-list {
+  display: block;
+}
+
+/* .dis:hover {
+  background-color: #494949;
+} */
+
+/* .dropdown-menu {
+  padding: 3px;
+  margin: 0;
+  border: 0;
+  width: auto;
+  z-index: 1;
+  background-color: #494949;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+  position: absolute;
+} */
+
+.search_overlay_trigger {
+  display: inline;
+  font-size: 16px;
+}
+
+.dis {
+  display: inline;
+  margin-left: -23px;
+}

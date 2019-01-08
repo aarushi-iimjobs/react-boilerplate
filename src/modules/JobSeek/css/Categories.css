@@ -1,0 +1,97 @@
+/* .nav-submenu {
+  display: none;
+} */
+
+.nav-menu-item:hover .nav-submenu {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav {
+  display: inline-block;
+  margin: 2rem auto 0;
+  color: #fff;
+  text-align: left;
+  width: 110%;
+  margin-top: 9px;
+  
+}
+
+a {
+  display: block;
+  padding: 0 15px;
+  line-height: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Droid Sans',sans-serif;
+}
+  
+.nav-menu {
+  line-height: 45px;
+  font-weight: 700;
+}
+  
+.nav-menu-item {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-menu-item:hover {
+  background-color: #494949;
+}
+
+/* .nav-submenu {
+  display: block;
+} */
+ 
+.nav-submenu {
+  font-weight: 200;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: auto;
+  background-color: #494949;
+}
+    
+.nav-submenu-item:hover {
+  text-decoration: underline;
+}
+
+.pull-left {
+  float: left;
+}
+
+.sidebar-brand {
+  margin-top: 7px;
+  line-height: 9px;
+}
+
+.pd0 {
+  padding: 0
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dropdown-item {
+  margin-top: -6px;
+  margin-bottom: -10px;
+  font-size: 11px;
+  width: 188px;
+  clear: both;
+}
