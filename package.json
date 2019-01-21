@@ -1,5 +1,5 @@
 {
-  "name": "pizza-shop",
+  "name": "iimjobs-portal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -49,10 +49,12 @@
     "react-dev-utils": "^6.1.1",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
+    "react-responsive-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-simple-dropdown": "^3.2.3",
     "react-table": "^6.8.6",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
