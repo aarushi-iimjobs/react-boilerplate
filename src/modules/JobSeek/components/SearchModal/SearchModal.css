@@ -1,0 +1,457 @@
+#recruiter_search_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1020;
+  background: #FFF;
+}
+
+.main_overlay .overlay_container.scrollContent {
+  display: block !important;
+  overflow-y: auto;
+}
+
+.main_overlay .overlay_container {
+  padding: 0;
+  height: 100%;
+}
+
+.main_overlay .overlay_container .overlay_wrapper {
+  width: 100%;
+  background: #FFF;
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.close_overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  padding: 10px;
+  opacity: .8;
+  background: url(../img/close-icon.png) no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header {
+  padding: 0 50px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header .content_wrapper {
+  font-size: 0;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header form.main_search_form {
+  display: inline-block;
+  width: 100%;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header input#search_term {
+  width: 40%;
+  width: calc(33% - 10px);
+  margin-right: 10px;
+  border-radius: 3px;
+  padding: 10px 5px 10px 40px;
+  border: 1px solid #e8e8e8;
+  background: #FFF;
+  font-size: 14px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  background: url(../img/search-icon.png) no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+  line-height: 20px;
+}
+
+input {
+  line-height: inherit;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header form.main_search_form>* {
+  display: inline;
+  vertical-align: top;
+}
+
+.expSelectBox {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: none;
+  margin: 0;
+  border-radius: 0px;
+  border-color: rgb(169, 169, 169);
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  color: black;
+  background-color: white;
+  cursor: default;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+} 
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
+.select-dropdown.inactive {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#search_experience {
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  width: calc(12.5% - 10px);
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.dropdown_label {
+  font-size: 14px;
+  font-family: 'Droid Sans' !important;
+  font-weight: 400;
+  color: #757575;
+}
+
+.chevron {
+  float: right;
+  color: #757575;
+  background: url(../img/chevron-down.png) no-repeat;
+  background-size: 30px;
+  background-position: center;
+  height: 20px;
+  width: 15px;
+  font-size: 0;
+}
+/* 
+.main_overlay .overlay_container .overlay_wrapper .overlay_header div#search_experience
+ul.dropdown_options_list, .main_overlay .overlay_container .overlay_wrapper
+.overlay_header div#search_location ul.dropdown_options_list, .main_overlay 
+.overlay_container .overlay_wrapper .overlay_header div#search_range ul */
+.dropdown_options_list {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Droid Sans';
+  color: #757575;
+  padding: 0;
+  list-style: none;
+  margin: 15px 0 0 0;
+  position: absolute;
+  top: 25px;
+  left: -1px;
+  right: -1px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+  z-index: 50;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  max-height: 250px;
+  overflow-y: auto;
+  /* display: none; */
+}
+
+/* .main_overlay .overlay_container .overlay_wrapper .overlay_header div#search_experience  */
+ul.dropdown_options_list li {
+  padding: 6px 13px;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header div#search_location.select-dropdown.inactive {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#search_location {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  width: calc(12.5% - 10px);
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+#search_range {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  width: calc(12.5% - 10px);
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+li.dropdown_list {
+  font-size: 12px;
+  padding: 0;
+  padding-left: 7px;
+}
+
+.rangeSelectBox {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: none;
+  margin: 0;
+  border-radius: 0px;
+  border-color: rgb(169, 169, 169);
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  color: black;
+  background-color: white;
+  cursor: default;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+}
+
+.main_overlay .overlay_container .overlay_wrapper .overlay_header button.submit_search_queries {
+  width: 15%;
+  background: #9b9b9b;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  color: #FFF;
+  font-size: 16px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.overlay_content {
+  font-size: 0;
+  width: 80%;
+  padding: 15px 50px 30px;
+  margin: 0 auto;
+}
+
+.main_overlay .overlay_content .featured_employer {
+  padding-left: 0;
+  width: 45%;
+  vertical-align: top;
+  float: right;
+  clear: both;
+}
+
+h4.section_title {
+  font-size: 14px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  color: #212121;
+  margin: 30px 0 10px 0;
+  line-height: 1.4;
+}
+
+.featured_employer .content_header_new {
+  width: 60px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  z-index: 12;
+  border-radius: 2px;
+  margin: 5px;
+  height: 50px;
+}
+
+
+.featured_employer .content_header_new img {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.hero_image {
+  min-height: 168px;
+  max-height: 264px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero_text_trailer_new {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  opacity: .6;
+  border: 0;
+  padding: 10px 20px;
+  font-family: 'Droid Sans';
+}
+
+a.see_inside_link {
+  color: white;
+  font-weight: bold;
+  font-family: 'Droid Sans';
+  font-size: 13px;
+  opacity: unset;
+}
+
+span.chevron-right {
+  font-size: 11px;
+}
+
+.featured_women_employers_container {
+  margin-top: 40px;
+}
+
+.featured_women_employers_container .featured_women_employer_div {
+  display: inline-block;
+  width: 31.33%;
+  margin-right: 3%;
+}
+
+.featured_women_employers_container .featured_women_employer_div .featured_women_employer_image {
+  width: 100%;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.main_overlay .overlay_content .top_listing {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 5%;
+}
+
+.search_tag_area {
+  font-size: 13px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  color: #757575;
+  min-height: 123px;
+}
+
+.search_tag_area .tag {
+  overflow: hidden;
+  max-width: 220px;
+  text-overflow: ellipsis;
+  background: #fcfcfc;
+  border: 1px solid #e8e8e8;
+  border-top-right-radius: 25px;
+  border-radius: 7px;
+  margin: 3px 1px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0 11px;
+  color: #7c7c7c;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.article.top_employers {
+  padding: 8px 0 10px 0;
+}
+
+.top_employees {
+  margin: 0 -5px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.employee_thumb {
+  width: calc(20% - 10px);
+  margin: 0 5px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px solid #e8e8e8;
+}
+
+.employee_thumb img {
+  width: 100%;
+}
+
+.courses_area.carousel {
+  margin: 0 -5px;
+}
+
+.course_thumb {
+  width: calc(24.3333% - 10px);
+  margin: 0 5px;
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  vertical-align: top;
+  height: 13rem;
+}
+
+.course_thumb p {
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  background: #fcfcfc;
+  padding: 10px 10px 8px;
+  border-top: 1px solid #e8e8e8;
+  text-align: center;
+  margin: 0;
+  display: block;
+  clear: both;
+  max-height: 150px !important;
+}
+
+.course_thumb .image_container {
+  max-height: 80px;
+  min-height: 60px;
+  display: table;
+  width: 100%;
+}
+
+.course_thumb .image_container .img {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.h121 {
+  height: 121px;
+}
+
+.myimg {
+  height: 100px;
+  padding: auto;
+}
+

@@ -1,9 +1,8 @@
 import filter from 'lodash/filter';
-import { REMOVE_JOB } from './actions/action-types';
-import { jobFeedData } from '../../models/jobFeed';
+import { REMOVE_JOB, FETCH_JOB_FEEDS } from './actions/action-types';
 
 const initialState = {
-  jobFeed: jobFeedData,
+  jobFeed: ''
 };
 
 export default (state = initialState, action) => {
@@ -13,6 +12,12 @@ export default (state = initialState, action) => {
         ...state,
         jobFeed: filter(state.jobFeed, ({ id }) => id !== action.id),
       };
+    
+    case FETCH_JOB_FEEDS:
+      return {
+        ...state,
+        jobFeed: action.payload.jobFeed
+      }
 
     default:
       return state;

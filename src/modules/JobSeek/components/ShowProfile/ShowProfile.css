@@ -1,0 +1,47 @@
+.newprofwidgetsectli {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-top: 1px solid #e4e4e4;
+  padding: 8px 12px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.newprofwidgetsectloptli {
+  margin: 0;
+  padding: 0;
+}
+
+.gry_txt {
+  color: #888;
+  min-width: 220px;
+}
+
+.mr30 {
+  margin-right: 30px;
+} 
+
+.gry_txt:hover {
+  text-decoration: underline;
+}
+
+i {
+  padding-top: 2px;
+}
+
+.same-line {
+  display: inline-flex;
+}
+
+.optlipending {
+  padding-top: 2px;
+  font-size: 11px;
+  color: #3C3C3C;
+}

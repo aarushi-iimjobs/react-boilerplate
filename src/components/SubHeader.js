@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { JOB_FEED_ROUTE } from '../models/routes';
-
 import Button from './Button';
 import Menu from '../modules/JobSeek/components/Menu';
 
@@ -12,7 +10,7 @@ const SubHeaderWrapper = styled.header`
   border-bottom: 1px solid #EAEAEA;
   background: #ddd;
   margin: 0 0;
-  height: 40px;
+  height: 28px;
   padding: 10px 30px;
   margin: 0px;
   display: flex;
@@ -26,10 +24,7 @@ const NavButton = styled(Button)`
 
 const SubHeader = ({ push }) => (
   <SubHeaderWrapper>
-    <nav className="nav">
-      {/* <NavButton onClick={() => push(JOB_FEED_ROUTE)}>Job Feed</NavButton> */}
-      <Menu></Menu>
-    </nav>
+    <Menu></Menu>
   </SubHeaderWrapper>
 );
 

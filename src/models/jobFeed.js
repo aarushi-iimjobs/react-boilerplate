@@ -16,7 +16,7 @@ export const jobFeedData = [
   },
   {
     id: 12,
-    premium_post: true,
+    premium_post: false,
     title: 'imaritime Consultancy : Mumbai',
     location: 'Mumbai',
     created: '2018-02-15 02:01:34'
@@ -24,7 +24,7 @@ export const jobFeedData = [
   },
   {
     id: 13,
-    premium_post: false,
+    premium_post: true,
     title: 'Openings in Investment Bank in Dubai',
     location: 'Dubai',
     created: '2008-07-25 02:01:34'

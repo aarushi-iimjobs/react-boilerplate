@@ -5,6 +5,7 @@ import configureStore from '../../store';
 
 import RootWrapper from '../../components/RootWrapper';
 import Routes from '../../routes';
+import './App.css';
 
 // Configure the store instance
 const store = configureStore();

@@ -1,0 +1,97 @@
+@import '../../../../themes/padding.css';
+
+
+.nav-menu-item:hover .nav-submenu {
+  display: block;
+  z-index: 1;
+}
+
+/* body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} */
+
+.nav {
+  display: inline-block;
+  margin: 2rem auto 0;
+  color: #fff;
+  text-align: left;
+  width: 110%;
+  margin-top: 9px;
+  
+}
+
+.category-item {
+  display: block;
+  /* padding: 0 6px; */
+  line-height: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Droid Sans',sans-serif;
+}
+  
+.nav-menu {
+  line-height: 45px;
+  font-weight: 700;
+}
+  
+.nav-menu-item {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.nav-menu-item:hover {
+  background-color: #494949;
+  /* height: auto; */
+  height: 37px;
+}
+
+.logo {
+  font-family: 'Comfortaa',cursive;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 6px;
+  margin-top: 14px;
+}
+ 
+.nav-submenu {
+  font-weight: 200;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: auto;
+  background-color: #494949;
+  margin-left: -12px;
+}
+    
+.nav-submenu-item:hover {
+  text-decoration: underline;
+}
+
+.sidebar-brand {
+  margin-top: 7px;
+  line-height: 9px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dropdown-item {
+  margin-top: -6px;
+  margin-bottom: -10px;
+  font-size: 11px;
+  width: 188px;
+  clear: both;
+}

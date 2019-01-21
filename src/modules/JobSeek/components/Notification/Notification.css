@@ -1,0 +1,109 @@
+
+.iimjobbseekernotifboxmain {
+  right: inherit;
+  left: -3px;
+  overflow: visible!important;
+  position: absolute;
+  top: 47px;
+  width: 400px;
+  border: 1px solid #c7c7c7;
+  background: #fff;
+  box-shadow: 0 2px 5px #c7c7c7;
+  z-index: 1;
+}
+
+.arrownotifytop {
+  left: 10px;
+  right: inherit;
+  position: absolute;
+  top: -19px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.notifboxmainboxlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 100%;
+}
+
+.notifiloadtext {
+  display: none;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.active {
+  background: #f8f8f8;
+}
+
+.sidebar-nav li ul.notifboxmainboxlist li a {
+  float: left;
+  width: 100%;
+  color: #4b4b4b!important;
+  margin: 0px!important;
+  padding: 11px 12px 12px 12px!important;
+  line-height: normal!important;
+}
+
+.notifyjobstime {
+  font-size: 11.2px;
+  font-style: italic;
+  color: #939393;
+  margin-top: 3px;
+  margin-right: 5px;
+  float: right;
+  max-width: 17%;
+}
+
+.notifboxmainboxinner {
+  float: left;
+  width: 83%;
+}
+
+.notifyverifyemailbgfull {
+  background: url(../img/emailbg.png) no-repeat 0px 8px;
+  background-size: 30px;
+}
+
+.notifyverifyphonebgfull {
+  background: url(../img/mobile.png) no-repeat 0px 8px;
+  background-size: 30px;
+}
+
+.sidebar-nav li ul.notifboxmainboxlist li a .notifboxmainboxinner h4 {
+  /* line-height: 18px; */
+  float: left;
+  width: 89%;
+  color: #4b4b4b;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 0 0 40px;
+  min-height: 30px;
+  font-weight: 500;
+}
+
+.notifboxmainboxheader {
+  padding: 8px 12px;
+  line-height: normal;
+  clear: both;
+  color: #4b4b4b;
+  font-weight: 700;
+}
+
+.notifboxmainboxheadertopbor {
+  border-top: 1px solid #e1e1e1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.seeallink {
+  color: #4b4b4b!important;
+  margin: 0px!important;
+  line-height: normal!important;
+}

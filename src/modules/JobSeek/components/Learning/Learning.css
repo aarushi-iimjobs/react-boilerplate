@@ -1,0 +1,282 @@
+
+.col-md-3 {
+  width: 25%;
+}
+
+#featured {
+  /* padding: 74px 0 10px 105px; */
+  min-height: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+#jobfeed_rightcol {
+  display: inline-flex;
+}
+
+.featured-div {
+  overflow: visible;
+  width: 100%;
+  float: left;
+  border: none;
+  padding-top: 0;
+}
+
+body {
+  font-family: 'Droid Sans',sans-serif;
+  color: #4b4b4b;
+}
+
+.lefnewskillbox {
+  padding: 0 0 15px 0;
+}
+
+.leftnewprofinsecbox {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  background-color: rgb(245, 246, 247);
+}
+
+.lefnewskillbox {
+  padding: 0 0 15px 0;
+  margin: 0;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt7 {
+  padding-top: 7px;
+}
+
+.profstatbg {
+  background: url(../img/profstatbg.png) no-repeat 0px 8px;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.h2forotherpage {
+  border-radius: 0;
+}
+
+.artogprofstat {
+  padding: 5px 15px 0 0;
+  float: right;
+}
+
+.profnone {
+  display: none;
+}
+
+.prof {
+  overflow: hidden;
+}
+
+.newprofwidgetsect {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 15px 10px;
+  clear: both;
+}
+
+.newprofwidgetsect span {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 12px;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.profsttavtaarimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.displaytabemail {
+  padding-right: 45px;
+  position: relative;
+}
+
+.profscore {
+  position: absolute;
+  right: -104px;
+  top: 0;
+  font-size: 16px;
+}
+
+.profstatbarouter {
+  display: block;
+  margin-top: 12px;
+  width: 100%;
+  background: #efefef;
+  height: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px #e4e4e4;
+  padding: 0;
+  width: 160%;
+}
+
+.profstatbarinner {
+  background: #4b4b4b;
+  height: 13px;
+  float: left;
+}
+
+.newprofwidgetsectli {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lefnewskillboxpadb0 {
+  padding: 0 0 15px 0;
+  margin: 0;
+  background-color: rgb(245, 246, 247);
+  height: 28px;
+}
+
+.arrtlesrcen {
+  padding: 2px 15px 0 0;
+  float: right;
+}
+
+.learningcenterb {
+  background: url(../img/learningcenterbg.jpg) no-repeat 0px 8px;
+  background-size: 30px;
+  cursor: pointer;
+}
+
+.h2forotherpage {
+  border-radius: 0;
+  padding: 12px 0 12px 50px!important;
+}
+
+.mt7 {
+  margin-top: 7px;
+}
+
+.ad-div {
+  display: block;
+  clear: both;
+  padding-bottom: 13px;
+  padding-top: 13px;
+}
+
+#learngrow {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.learn {
+  border-top: 0px solid #ccc
+}
+
+.pt0 {
+  padding-top: 0;
+}
+
+.mt0 {
+  margin-top: 0
+}
+
+.col-md-12 {
+  position: relative;
+  min-height: 1px;
+  display: inline-block;
+}
+
+.pdrl{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.text-right {
+  text-align: right;
+  padding-right: 12px;
+}
+
+.col-md-10 {
+  width: 83.33333333333334%;
+}
+
+.col-md-2 {
+  width: 16.666666666666664%;
+  float: right;
+}
+
+.img-circle-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.pdl0 {
+  padding-left: 0;
+}
+
+.col-md-9 {
+  width: 75%;
+  margin-left: -18px;
+}
+
+.maxw50 {
+  max-width: 50px;
+}
+
+.dis-inline {
+  display: inline-flex;
+}
+
+
+.txt-display {
+  font-size: 16.5px;
+  font-weight: 500;
+  font-family: 'Noto Sans',sans-serif;
+}
+
+.ml14 {
+  margin-left: 14px;
+}
+
+.ml6 {
+  margin-left: 6px;
+}
+
+.mb20 {
+  margin-bottom: 5%;
+}
+
+.name-hd {
+  display: table-cell;
+  vertical-align: middle!important;
+  font-weight: normal!important;
+  float: none!important;
+  font-size: 13px;
+}
+
+.talent {
+  display: flex;
+}
+
+.a-tag {
+  display: block;
+  padding: 0 15px;
+  line-height: inherit;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Droid Sans',sans-serif;
+}

@@ -10,8 +10,7 @@ import Categories from '../modules/JobSeek/components/Categories';
 
 const AppHeaderWrapper = styled.header`
   background-color: black;
-  height: 27px;
-  padding: 10px 30px;
+  height: 50px;
   margin: 0px;
   display: flex;
   align-items: center;
@@ -25,11 +24,6 @@ const Aref = styled.a`
   font-size: 14px;
 `;
 
-// const Head = styled.h3`
-//   font-family: 'Comfortaa',cursive;
-//   font-size: 24px !important;
-// `;
-
 const NavButton = styled(Button)`
   margin: auto 10px;
 `;
@@ -41,7 +35,7 @@ const AppHeader = ({ push }) => (
         <h3>iimjobs</h3>
         <span>.com</span>
       </Aref> */}
-      <Categories></Categories>
+      <Categories />
       {/* <NavButton onClick={() => push(JOB_FEED_ROUTE)}>Job Feed</NavButton> */}
     </div>
   </AppHeaderWrapper>
