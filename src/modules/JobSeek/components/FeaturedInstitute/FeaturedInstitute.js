@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import map from 'lodash/map';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 import '../Learning/Learning.css';
 import { featuredInstitutes } from '../../../../models/featuredInstitutes';
-import GreyDivider from '../../../../components/GreyDivider';
 
 class FeaturedInstitute extends Component {
   constructor(props) {
@@ -12,23 +13,14 @@ class FeaturedInstitute extends Component {
 
   render() {
     return (
-      <div>
-        <div className="txt15">
-          <h4 className="txt15 mt0 strong pt0">Featured Institute</h4>
-        </div>
-        <GreyDivider />
-        {map(featuredInstitutes, featuredInstitute => (
-          <div>
-            <a className="a-tag" title={featuredInstitute.name}>
-              <div className="row">
-                <div className="col-md-12 pdrl">
-                  <img className="wd-full" src={featuredInstitute.url} alt={featuredInstitute.name}/>
-                </div>
-              </div>
-            </a>
-            <GreyDivider />
-          </div>
-        ))}
+      <div className="mb20">
+        <Carousel showThumbs={false} showStatus={false}>
+          {map(featuredInstitutes, featuredInstitute => (
+            <div className="col-md-12 pdrl">
+              <img className="" src={featuredInstitute.url} alt={featuredInstitute.name}/>
+            </div>
+          ))}
+        </Carousel>
       </div>
     );
   }

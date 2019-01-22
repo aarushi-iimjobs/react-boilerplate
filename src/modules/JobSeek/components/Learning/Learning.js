@@ -89,7 +89,7 @@ class Learning extends Component {
                 <img className="wd-full" src="https://static.iimjobs.com/resources/images/TR_GSK_JF_12Feb18.jpg" alt="GSK" />
               </a>
             </div>
-            <div id="learnngrow" className="hidden-sm learn">
+            <div id="learnngrow" className="hidden-sm learn ml14">
               <FeaturedInstitute />
               <LearnNGrow />
             </div>
