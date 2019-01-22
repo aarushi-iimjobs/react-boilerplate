@@ -5,7 +5,6 @@ import map from 'lodash/map';
 import { categories } from '../../../../models/categories';
 import './Categories.css';
 
-
 const CategoriesWrapper = styled.nav`
   display: inline-block;
   margin: 2rem auto 0;
@@ -35,18 +34,18 @@ class Categories extends Component {
           </a>
         </div>
         <ul className="nav-menu">
-        {map(categories, category => (
-          <li className="nav-menu-item">
-            <a href="" className="category-item">{category.name}</a>
-            <ul className="nav-submenu">
-              {map(category.jobs, job => (
-                <li className="nav-submenu-item">
-                  <a href=""  className="dropdown-item">{job}</a>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
+          {map(categories, category => (
+            <li className="nav-menu-item">
+              <a href="" className="category-item">{category.name}</a>
+              <ul className="nav-submenu">
+                {map(category.jobs, job => (
+                  <li className="nav-submenu-item">
+                    <a href=""  className="dropdown-item">{job}</a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </CategoriesWrapper>
     );

@@ -115,8 +115,7 @@ class SearchModal extends Component {
                         </ul>
                       }
                     </div>
-                            
-                            
+          
                     <input type="hidden" name="currsearchurl" id="currsearchurl" value="https://www.iimjobs.com/search/" />
                     <button type="submit" value="Search" className="submit_search_queries">Search</button>
                   </form>

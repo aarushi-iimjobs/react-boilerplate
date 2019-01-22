@@ -65,7 +65,7 @@ class ShowProfile extends Component {
             <p className="same-line">
               <a href="https://www.iimjobs.com/registration/registration.php?profiletype=1&amp;r" className="gry_txt">Recommendations</a>
               <span><i><img src="https://static.iimjobs.com/resources/img/tickigrey.png" />
-            </i></span>
+              </i></span>
             </p>
           </div>
         </li>

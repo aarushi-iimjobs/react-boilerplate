@@ -1,4 +1,3 @@
-
 /**
  * Function to calculate the date in the format dd/mm/yyyy
  * @param {string} date posting date of a job

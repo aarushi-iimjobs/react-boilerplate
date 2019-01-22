@@ -52,9 +52,9 @@ class Learning extends Component {
                   Profile Status
                   {
                     this.state.showProfile ? 
-                    <img className="artogprofstat" src="https://static.iimjobs.com/resources/img/profstatupar.png" id="showupimg" onClick={this.handleIconClick} />
-                    :
-                    <img src="https://static.iimjobs.com/resources/img/profstatbelowar.png" className="artogprofstat hidden-sm" id="showbelowimg" onClick={this.handleIconClick} /> 
+                      <img className="artogprofstat" src="https://static.iimjobs.com/resources/img/profstatupar.png" id="showupimg" onClick={this.handleIconClick} />
+                      :
+                      <img src="https://static.iimjobs.com/resources/img/profstatbelowar.png" className="artogprofstat hidden-sm" id="showbelowimg" onClick={this.handleIconClick} /> 
                   }
                 </h2>
                 {this.state.showProfile && 
@@ -96,9 +96,9 @@ class Learning extends Component {
           </div>
           <div className="sectionHide">
             <div className="pd0 pd5 col-md-12 wd-full">
-             <GreyDivider />  
+              <GreyDivider />  
               <h4 className="txt15 mt0 strong pt7">From our Blog</h4>
-             <GreyDivider />
+              <GreyDivider />
               <div className="col-md-12 wd-full pd0">
                 <a target="_blank" className="txt-color a-tag">How to identify a 'Talker' from a 'Doer' when you're hiring?</a>
                 <div className="talent">
@@ -113,7 +113,7 @@ class Learning extends Component {
                   </div>
                 </div>
               </div>
-             <GreyDivider />
+              <GreyDivider />
               <div className="col-md-12 wd-full pd0">
                 <a target="_blank" className="txt-color a-tag">How to deal with and weed out the groupism at your workplace?</a>
                 <div className="talent">
@@ -128,7 +128,7 @@ class Learning extends Component {
                   </div>
                 </div>
               </div>
-             <GreyDivider />
+              <GreyDivider />
             </div>
           </div>
         </div>

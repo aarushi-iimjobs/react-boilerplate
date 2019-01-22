@@ -9,7 +9,7 @@ import reducers from '../reducers';
 export default function configureStore(initialState = {}) {
   const middlewares = [];
 
-  const enhancers = [applyMiddleware(thunk)];
+  const enhancers = [ applyMiddleware(thunk) ];
 
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose
   /* eslint-disable no-underscore-dangle, indent */
