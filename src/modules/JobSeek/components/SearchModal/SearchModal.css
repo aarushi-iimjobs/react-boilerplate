@@ -38,7 +38,7 @@
   cursor: pointer;
   padding: 10px;
   opacity: .8;
-  background: url(../img/close-icon.png) no-repeat;
+  background: url(../../../../img/close-icon.png) no-repeat;
   background-position: center;
   background-size: 25px;
 }
@@ -69,7 +69,7 @@
   font-size: 14px;
   font-family: 'Droid Sans';
   font-weight: 400;
-  background: url(../img/search-icon.png) no-repeat;
+  background: url(../../../../img/search-icon.png) no-repeat;
   background-position: 10px center;
   background-size: 20px;
   line-height: 20px;
@@ -141,7 +141,7 @@ option {
 .chevron {
   float: right;
   color: #757575;
-  background: url(../img/chevron-down.png) no-repeat;
+  background: url(../../../../img/chevron-down.png) no-repeat;
   background-size: 30px;
   background-position: center;
   height: 20px;

@@ -150,21 +150,21 @@ class SearchModal extends Component {
                         <h4 className="section_title">Employers looking out for women professionals like you</h4>
                         <div className="featured_women_employer_div">
                           <a href="https://diversity.iimjobs.com/company/gsk.html?ref=jobseekerSearch" target="_blank">
-                            <img src="/home/dell/work/practice/iimjobs-portal/src/modules/JobSeek/components/img/gsk.jpeg" className="featured_women_employer_image" />
+                            <img src="../../../../img/gsk.jpeg" className="featured_women_employer_image" />
                             <p className="featured_women_employer_name">GSK</p>
                           </a>
                         </div>
 
                         <div className="featured_women_employer_div">
                           <a href="https://diversity.iimjobs.com/company/accenture.html?ref=jobseekerSearch" target="_blank">
-                            <img src="/home/dell/work/practice/iimjobs-portal/src/modules/JobSeek/components/img/accenture.jpeg" className="featured_women_employer_image" />
+                            <img src="../../../../img/accenture.jpeg" className="featured_women_employer_image" />
                             <p className="featured_women_employer_name">Accenture</p>
                           </a>
                         </div>
                           
                         <div className="featured_women_employer_div mr0">
                           <a href="https://diversity.iimjobs.com/company/wns.html?ref=jobseekerSearch" target="_blank">
-                            <img src="../img/123.jpg" className="featured_women_employer_image" alt="gsk" />
+                            <img src="" className="featured_women_employer_image" alt="gsk" />
                             <p className="featured_women_employer_name">WNS</p>
                           </a>
                         </div>

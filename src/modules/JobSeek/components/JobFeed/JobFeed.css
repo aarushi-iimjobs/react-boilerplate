@@ -86,7 +86,7 @@ option {
   float: left;
   width: 6px;
   height: 6px;
-  background-image: url(../img/chevron-down.png) no-repeat;
+  background-image: url(../../../../img/chevron-down.png) no-repeat;
   background-position: 1px 3px;
   background-size: 20px;
   cursor: pointer;

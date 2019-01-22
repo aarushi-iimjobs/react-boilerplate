@@ -52,7 +52,7 @@ body {
 }
 
 .profstatbg {
-  background: url(../img/profstatbg.png) no-repeat 0px 8px;
+  background: url(../../../../img/profstatbg.png) no-repeat 0px 8px;
   background-size: 30px;
   cursor: pointer;
 }
@@ -146,7 +146,7 @@ body {
 }
 
 .learningcenterb {
-  background: url(../img/learningcenterbg.jpg) no-repeat 0px 8px;
+  background: url(../../../../img/learningcenterbg.jpg) no-repeat 0px 8px;
   background-size: 30px;
   cursor: pointer;
 }

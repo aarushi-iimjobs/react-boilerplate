@@ -65,12 +65,12 @@
 }
 
 .notifyverifyemailbgfull {
-  background: url(../img/emailbg.png) no-repeat 0px 8px;
+  background: url(../../../../img/emailbg.png) no-repeat 0px 8px;
   background-size: 30px;
 }
 
 .notifyverifyphonebgfull {
-  background: url(../img/mobile.png) no-repeat 0px 8px;
+  background: url(../../../../img/mobile.png) no-repeat 0px 8px;
   background-size: 30px;
 }
 
