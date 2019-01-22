@@ -7,7 +7,7 @@
 
 
 ### Get the code and start project
-- clone the repo using `git clone https://github.com/aarushi-goyal/iimjobs-portal.git`
+- clone the repo using `git clone https://github.com/aarushi-iimjobs/iimjobs-portal.git`
 - cd into project directory
 - install npm dependencies using `npm install` or `yarn`
 - start the project using `npm start` or `yarn start`
