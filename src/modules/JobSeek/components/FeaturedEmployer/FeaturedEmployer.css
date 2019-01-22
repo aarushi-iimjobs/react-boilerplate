@@ -28,4 +28,9 @@
   padding: auto;
 }
 
+.overflow {
+  height: 220px;
+  overflow-y: overlay;
+}
+
 
