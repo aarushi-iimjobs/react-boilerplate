@@ -13,7 +13,7 @@ export default (
       <AppHeader push={history.push} />
       <SubHeader push={history.push} />
       <Route path={JOB_FEED_ROUTE} exact component={JobSeek} />
-      {/* <Redirect from={BASE_ROUTE} to={JOB_FEED_ROUTE} /> */}
+      <Redirect from={BASE_ROUTE} to={JOB_FEED_ROUTE} />
     </div>
   </Router>
 );

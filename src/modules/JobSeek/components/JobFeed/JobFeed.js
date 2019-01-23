@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import map from 'lodash/map';
+import throttle from 'lodash/throttle';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
@@ -19,12 +20,12 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
+const debounceWaitTime = 1000;
+const debounceOptions = { leading: true, trailing: true };
+
 class JobFeed extends Component {
   constructor(props) {
     super(props);
-    this.openRelevanceDropdown = this.openRelevanceDropdown.bind(this);
-    this.openExperienceDropdown = this.openExperienceDropdown.bind(this);
-    this.openLocationDropdown = this.openLocationDropdown.bind(this);
     this.state = {
       title: 'My Jobfeed',
       showRelevanceDropdown: false,
@@ -33,42 +34,45 @@ class JobFeed extends Component {
     }
   }
 
+  throttledWindowHandler = () => throttle(
+    this.windowSizeHandler,
+    debounceWaitTime,
+    debounceOptions
+  );
+
   componentDidMount() {
     this.props.dispatch(getJobFeeds());
+    // window.addEventListener('scroll', this.throttledWindowHandler);
   }
 
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.onScroll, false);
-  // }
-
   // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.onScroll, false);
+  //   window.removeEventListener('scroll', this.throttledWindowHandler);
   // }
 
-  // onScroll = () => {
+  // windowSizeHandler = e => {
   //   if (
   //     (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) &&
   //     this.props.list.length && this.props.isLoading
   //   ) {
-  //     this.props.onPaginatedSearch();
+  //     this.props.dispatch(getJobFeeds());
   //   }
   // }
 
-  openRelevanceDropdown() {
+  openRelevanceDropdown = () => {
     this.setState((state) => ({ showRelevanceDropdown: !state.showRelevanceDropdown }))
   }
 
-  openExperienceDropdown() {
+  openExperienceDropdown = () => {
     this.setState((state) => ({ showExperienceDropdown: !state.showExperienceDropdown }))
   }
   
-  openLocationDropdown() {
+  openLocationDropdown = () => {
     this.setState((state) => ({ showLocationDropdown: !state.showLocationDropdown }))
   }
 
   render() {
-    let { jobFeed, removeJob } = this.props;
-    console.log(jobFeed, typeof(jobFeed))
+    const { jobFeed, removeJobFeed } = this.props;
+
     return (
 
       <Wrapper>
@@ -178,10 +182,10 @@ class JobFeed extends Component {
         <div className="jobfeed-wrapper">
           {map(jobFeed, (job, index) => (
             <Job
-              removeJob={() => removeJob(job.id)}
+              removeJob={() => removeJobFeed(job.id)}
               key={job.id}
               index={index}
-              premium_post={parseInt(job.premium_post)}
+              premiumPost={parseInt(job.premium_post)}
               jobTitle={job.title}
               jobLocation={job.location}
               jobCreatedDate={job.published_date}
@@ -199,12 +203,13 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
   dispatch,
-  removeJob: id => dispatch(removeJob(id)),
+  removeJobFeed: id => dispatch(removeJob(id)),
 });
 
 JobFeed.propTypes = {
+  dispatch: PropTypes.func,
   jobFeed: PropTypes.array,
-  removeJob: PropTypes.func.isRequired,
+  removeJobFeed: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(JobFeed);

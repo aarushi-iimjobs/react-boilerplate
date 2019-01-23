@@ -8,9 +8,6 @@ import SearchModal from '../SearchModal';
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseHover = this.handleMouseHover.bind(this);
-    this.handleNotifyBell = this.handleNotifyBell.bind(this);
-    this.openSearchModal = this.openSearchModal.bind(this);
     this.state = {
       isHovering: false,
       showNotification: false,
@@ -18,27 +15,27 @@ class Menu extends Component {
     };
   }
 
-  handleMouseHover() {
+  handleMouseHover = () => {
     this.setState(this.toggleHoverState);
   }
 
-  toggleHoverState(state) {
+  toggleHoverState = (state) => {
     return {
       isHovering: !state.isHovering,
     };
   }
 
-  handleNotifyBell() {
+  handleNotifyBell = () => {
     this.setState(this.toggleNotifyBellClick);
   }
 
-  toggleNotifyBellClick(state) {
+  toggleNotifyBellClick = (state) => {
     return {
       showNotification: !state.showNotification,
     }
   }
 
-  openSearchModal() {
+  openSearchModal = () => {
     this.setState(() => ({ showSearchModal: true }));
   }
 

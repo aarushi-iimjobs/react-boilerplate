@@ -7,10 +7,6 @@ import './SearchModal.css';
 class SearchModal extends Component {
   constructor(props) {
     super(props);
-    this.onCloseModal = this.onCloseModal.bind(this);
-    this.openExperienceDropdown = this.openExperienceDropdown.bind(this);
-    this.openLocationDropdown = this.openLocationDropdown.bind(this);
-    this.openPostingDropdown = this.openPostingDropdown.bind(this);
     this.state = {
       open: props.modalState,
       showExperienceDropdown: false,
@@ -19,23 +15,23 @@ class SearchModal extends Component {
     }
   }
   
-  onOpenModal() {
+  onOpenModal = () => {
 		this.setState({ open: true });
 	}
 
-	onCloseModal() {
+	onCloseModal = () => {
 		this.setState({ open: false });
   }
   
-  openExperienceDropdown() {
+  openExperienceDropdown = () => {
     this.setState((state) => ({ showExperienceDropdown: !state.showExperienceDropdown }))
   }
   
-  openLocationDropdown() {
+  openLocationDropdown = () => {
     this.setState((state) => ({ showLocationDropdown: !state.showLocationDropdown }))
   }
   
-  openPostingDropdown() {
+  openPostingDropdown = () => {
     this.setState((state) => ({ showPostingDropdown: !state.showPostingDropdown }))
   }
 

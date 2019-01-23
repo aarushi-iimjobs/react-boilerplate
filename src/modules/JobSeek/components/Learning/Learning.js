@@ -19,17 +19,16 @@ const LearningWrapper = styled.div`
 class Learning extends Component {
   constructor(props) {
     super(props);
-    this.handleIconClick = this.handleIconClick.bind(this);
     this.state = {
       showProfile: false,
     };
   }
 
-  handleIconClick() {
+  handleIconClick = () => {
     this.setState(this.toggleShowProfileState);
   }
 
-  toggleShowProfileState(state) {
+  toggleShowProfileState = (state) => {
     return {
       showProfile: !state.showProfile,
     };

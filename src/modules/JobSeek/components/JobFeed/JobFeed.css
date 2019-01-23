@@ -84,10 +84,10 @@ option {
 
 .filter .selectBox-arrow {
   float: left;
-  width: 6px;
+  width: 28px;
   height: 6px;
-  background-image: url(../../../../img/chevron-down.png) no-repeat;
-  background-position: 1px 3px;
+  background: url(../../../../img/chevron-down.png) no-repeat;
+  background-position: 13px -9px;
   background-size: 20px;
   cursor: pointer;
 }

@@ -8,28 +8,25 @@ import Advertisement from './Advertisement.js';
 class Job extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleDateHover = this.toggleDateHover.bind(this);
-    this.hideDateHover = this.hideDateHover.bind(this);
-    this.showDateHover = this.showDateHover.bind(this);
     this.state = {
       showDateHover: true
     }
   }
 
-  toggleDateHover() {
+  toggleDateHover = () => {
     this.setState((state) => ({ showDateHover: !state.showDateHover }))
   }
 
-  hideDateHover() {
+  hideDateHover = () => {
     this.setState({ showDateHover: false });
   }
 
-  showDateHover() {
+  showDateHover = () => {
     this.setState({ showDateHover: true });
   }
 
   render() {
-    const { premium_post, key, index, jobTitle, jobLocation, jobCreatedDate, removeJob } = this.props;
+    const { premiumPost, index, jobTitle, jobLocation, jobCreatedDate, removeJob } = this.props;
     const postingDate = calculateDateInFormat(jobCreatedDate);
 
     if ((index+1) % 12)
@@ -38,7 +35,7 @@ class Job extends React.Component {
           <div className="wd73 col-md-11 hh container pdl0 pull-left ml0">
             <div className="pull-left col-lg-3new pd0 hidden-sm">
               <span rel="tooltip" data-trigger="hover click" title="" className="pt4 pull-left mr6" data-original-title="company job"><i className="fa fa-suitcase darkgreyish"></i></span>
-              <span className={"pull-left mr6 pt4" + (premium_post ? " ": " grey_txt")}><i className="fa fa-bookmark"></i></span>
+              <span className={"pull-left mr6 pt4" + (premiumPost ? " ": " grey_txt")}><i className="fa fa-bookmark"></i></span>
               <span rel="tooltip" data-trigger="hover click" className="mr6 glyphicon glyphicon-plus-sign plsign plsigngrey pull-left" data-original-title="" title=""><i className=" fa fa-plus-circle"></i></span>
               <span className="showcase-logo ml6 top4">
                 <a href="https://showcase.iimjobs.com/rscp-amazon-125.html?ref=jobfeedlist" target="_blank">
@@ -90,7 +87,8 @@ class Job extends React.Component {
 }
 
 Job.propTypes = {
-  premium_post: PropTypes.number,
+  premiumPost: PropTypes.number,
+  index: PropTypes.number,
   jobTitle: PropTypes.string,
   jobLocation: PropTypes.string,
   jobCreatedDate: PropTypes.string,
