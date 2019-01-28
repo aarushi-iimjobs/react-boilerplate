@@ -1,8 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Loadable from 'react-loadable';
 
-import JobFeed from '../components/JobFeed';
-import Learning from '../components/Learning';
+function Loading() {
+  return <h3>Loading...</h3>;
+}
+
+const JobFeed = Loadable({
+  loader: () => import('../components/JobFeed'),
+  loading: Loading,
+});
+
+const Learning = Loadable({
+  loader: () => import('../components/Learning'),
+  loading: Loading,
+})
 
 const JobFeedWrapper = styled.div`
 `;
@@ -14,18 +26,14 @@ const PageContentWrapper = styled.div`
   background-color: #fff;
 `;
 
-class JobSeek extends React.Component {
-  render() {
-    return (
-      <JobFeedWrapper>
-        <PageContentWrapper>
-          <JobFeed />
-          <Learning />
-        </PageContentWrapper>
-      </JobFeedWrapper>
-    )
-  }
-}
+const JobSeek = () => (
+  <JobFeedWrapper>
+    <PageContentWrapper>
+      <JobFeed />
+      <Learning />
+    </PageContentWrapper>
+  </JobFeedWrapper>
+)
 
 JobSeek.propTypes = {
 };
