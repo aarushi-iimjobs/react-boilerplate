@@ -1,11 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
 import './Header.css';
-
-import { JOB_FEED_ROUTE } from '../models/routes';
-
-import Button from './Button';
 import Categories from '../modules/JobSeek/components/Categories';
 
 const AppHeaderWrapper = styled.header`
@@ -16,33 +12,15 @@ const AppHeaderWrapper = styled.header`
   align-items: center;
 `;
 
-const Aref = styled.a`
-  color: #fff;
-  text-decoration: none;
-  line-height: 9px;
-  font-family: 'Droid Sans',sans-serif;
-  font-size: 14px;
-`;
-
-const NavButton = styled(Button)`
-  margin: auto 10px;
-`;
-
 const AppHeader = ({ push }) => (
   <AppHeaderWrapper>
     <div>
-      {/* <Aref href="https://www.iimjobs.com/jobfeed">
-        <h3>iimjobs</h3>
-        <span>.com</span>
-      </Aref> */}
       <Categories />
-      {/* <NavButton onClick={() => push(JOB_FEED_ROUTE)}>Job Feed</NavButton> */}
     </div>
   </AppHeaderWrapper>
 );
 
 AppHeader.propTypes = {
-  push: PropTypes.func.isRequired,
 };
 
 export default AppHeader;

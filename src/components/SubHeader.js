@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Button from './Button';
 import Menu from '../modules/JobSeek/components/Menu';
 
 const SubHeaderWrapper = styled.header`
@@ -18,18 +16,13 @@ const SubHeaderWrapper = styled.header`
   justify-content: flex-start;
 `;
 
-const NavButton = styled(Button)`
-  margin: auto 10px;
-`;
-
-const SubHeader = ({ push }) => (
+const SubHeader = () => (
   <SubHeaderWrapper>
-    <Menu></Menu>
+    <Menu />
   </SubHeaderWrapper>
 );
 
 SubHeader.propTypes = {
-  push: PropTypes.func.isRequired,
 };
 
 export default SubHeader;
