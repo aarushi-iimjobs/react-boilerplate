@@ -4,17 +4,13 @@ import './Profile.css';
 import GreyDivider from '../../../../components/GreyDivider';
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
   render() {
     return (
       <ul className={"profile-list about dropdown-menu"}>
         <li>
           <div className="profwidgetsect">
             <span className="posrel">
-              <img className="img" src="https://edgar.iimjobs.com/media/userpics/2018/09/07/2018-09-07-14-56-22-456800.jpg" />
+              <img className="img" src="https://edgar.iimjobs.com/media/userpics/2018/09/07/2018-09-07-14-56-22-456800.jpg" alt="" />
             </span>
             <h3 className="name">Aarushi Goyal
               <span className="posrel email">
@@ -84,7 +80,7 @@ class Profile extends Component {
           <div className="pull-left wd34">
             <a href="http://hirist.com">hirist.com - IT Jobs</a>
           </div>
-          <div className="clearfix"></div>
+          <div className="clearfix" />
         </li>
       </ul>
     );

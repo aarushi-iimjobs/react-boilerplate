@@ -15,7 +15,7 @@ class FeaturedInstitute extends Component {
   render() {
     const featureComponent = map(featuredInstitutes, featuredInstitute => (
       <div className="col-md-12 pdrl">
-        <img className="" src={featuredInstitute.url} alt={featuredInstitute.name}/>
+        <img className="" src={featuredInstitute.url} alt={featuredInstitute.name} alt="" />
       </div>
     ));
     return (

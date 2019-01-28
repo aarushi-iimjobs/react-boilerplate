@@ -4,12 +4,12 @@
   padding: 0;
 }
 
-li {
+.newprofilewidgetsectli li {
   border-top: 1px solid #e4e4e4;
-  padding: 8px 12px;
 }
 
 li {
+  padding: 8px 12px;
   display: list-item;
   text-align: -webkit-match-parent;
 }

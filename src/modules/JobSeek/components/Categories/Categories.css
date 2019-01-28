@@ -1,24 +1,9 @@
 @import '../../../../themes/padding.css';
 
-
 .nav-menu-item:hover .nav-submenu {
   display: block;
   z-index: 1;
 }
-
-/* body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 1.1;
-}
-
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-} */
 
 .nav {
   display: inline-block;
@@ -41,7 +26,7 @@ ul {
 }
   
 .nav-menu {
-  line-height: 45px;
+  line-height: 30px;
   font-weight: 700;
 }
   
@@ -56,16 +41,9 @@ ul {
   /* height: auto; */
   height: 37px;
 }
-
-.logo {
-  font-family: 'Comfortaa',cursive;
-  font-size: 20px;
-  font-weight: 500;
-  margin-left: 6px;
-  margin-top: 14px;
-}
  
 .nav-submenu {
+  margin-top: 12px;
   font-weight: 200;
   text-transform: none;
   display: none;
@@ -77,15 +55,6 @@ ul {
     
 .nav-submenu-item:hover {
   text-decoration: underline;
-}
-
-.sidebar-brand {
-  margin-top: 7px;
-  line-height: 9px;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .dropdown-item {

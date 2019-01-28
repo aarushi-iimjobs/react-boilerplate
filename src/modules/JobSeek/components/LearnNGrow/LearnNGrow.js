@@ -18,7 +18,7 @@ class LearnNGrow extends Component {
         {map(learngrow, course => (
           <div className="row dis-inline">
             <div className="col-md-3 mb20">
-              <a className="a-tag" target="_blank" href="" title={course.name}>
+              <a className="a-tag" href="" title={course.name}>
                 <img className="maxw50" src={course.url} />
               </a>
             </div>

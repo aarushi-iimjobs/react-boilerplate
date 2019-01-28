@@ -25,6 +25,7 @@
 .search_overlay_trigger {
   display: inline;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .x:hover {

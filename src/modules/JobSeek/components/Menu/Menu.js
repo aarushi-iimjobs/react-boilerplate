@@ -36,38 +36,45 @@ class Menu extends Component {
   }
 
   openSearchModal = () => {
+    console.log(this.state.showSearchModal, '=====search')
     this.setState(() => ({ showSearchModal: true }));
   }
 
   render() {
+    const {
+      isHovering,
+      showNotification,
+      showSearchModal,
+    } = this.state;
     return (
       <ul className="sidebsmall sidebar-nav">
         <li className="posrel pd0 pull-left mw50 lh47">
-          <div className="menu userlink ellipsis"
+          <div
+            className="menu userlink ellipsis"
             onMouseEnter={this.handleMouseHover}
             onMouseLeave={this.handleMouseHover}
           >
-            <i className="fa fa-bars txt17 grey_txt"></i>
+            <i className="fa fa-bars txt17 grey_txt" />
             <span className="txt17 col menu-span">Menu</span>
-            {this.state.isHovering ? <Profile /> : ''}
+            {isHovering ? <Profile /> : ''}
           </div>
         </li>
         <li className="posrel">
           <span className="fa fa-bell notifybell" id="notifybellid" onClick={this.handleNotifyBell}>
-            <i className="notcbell visible-xs" data-value=""></i>
+            <i className="notcbell visible-xs" data-value="" />
           </span>
-          {(this.state.showNotification && !this.state.isHovering) ? <Notification /> : ''}
+          {(showNotification && !isHovering) ? <Notification /> : ''}
         </li>
         <li className="posrel x">
           <a onClick={this.openSearchModal} className="search_overlay_trigger">
-            <i className="fa fa-search"></i>
+            <i className="fa fa-search" />
           </a>
           {
-            this.state.showSearchModal &&
-            
-            <SearchModal 
-              modalState={this.state.showSearchModal}
-            />
+            showSearchModal
+              && (
+              <SearchModal
+                modalState={showSearchModal}
+              />)
           }
         </li>
       </ul>

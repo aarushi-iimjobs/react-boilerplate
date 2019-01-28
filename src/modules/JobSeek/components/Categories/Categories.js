@@ -4,6 +4,7 @@ import map from 'lodash/map';
 
 import { categories } from '../../../../models/categories';
 import './Categories.css';
+import Logo from '../../../../components/Logo';
 
 const CategoriesWrapper = styled.nav`
   display: inline-block;
@@ -20,19 +21,10 @@ const CategoriesWrapper = styled.nav`
 `;
 
 class Categories extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <CategoriesWrapper>
-        <div className="sidebar-brand pull-left text-right col-md-1 pd0">
-          <a href="https://www.iimjobs.com/jobfeed" className="sitename">
-            <h3 className="logo">iimjobs</h3>
-            <span className="txt13">.com</span>
-          </a>
-        </div>
+        <Logo />
         <ul className="nav-menu">
           {map(categories, category => (
             <li className="nav-menu-item">
