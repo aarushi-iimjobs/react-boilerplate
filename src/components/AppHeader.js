@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import './Header.css';
 import Categories from '../modules/JobSeek/components/Categories';
