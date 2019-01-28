@@ -175,6 +175,7 @@ const mapDispatchToProps = dispatch => ({
 
 JobFeed.propTypes = {
   jobFeed: PropTypes.array,
+  isLoading: PropTypes.bool,
   removeJobFeed: PropTypes.func.isRequired,
 };
 

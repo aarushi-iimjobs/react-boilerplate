@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isJobLoading: false,
-        jobFeed: [...state.jobFeed, ...action.payload.jobFeed],
+        jobFeed: [ ...state.jobFeed, ...action.payload.jobFeed ],
       }
 
     default:

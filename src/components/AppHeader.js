@@ -21,6 +21,7 @@ const AppHeader = ({ push }) => (
 );
 
 AppHeader.propTypes = {
+  push: PropTypes.func.isRequired,
 };
 
 export default AppHeader;
