@@ -1,17 +1,18 @@
 import axios from 'axios';
-import { fetchJobFeeds } from './actions';
-import { jobFeedData } from '../../models/jobFeed';
+import { fetchJobFeeds, fetchJobFeedsSuccess } from './actions';
+
 const API_URL = 'http://angel.iimjobs.com/api7/catelist/13';
 
-export function getJobFeeds() {
-  return function(dispatch) {
+export default function getJobFeeds() {
+  return (dispatch) => {
+    dispatch(fetchJobFeeds());
     axios.get(`${API_URL}`)
-    .then(json => {
-      dispatch(fetchJobFeeds(json.data.jobs));
-      return json.data.jobs;
-    }).catch(err => {
-      console.log(err, '=======error====');
-    })
+      .then((json) => {
+        dispatch(fetchJobFeedsSuccess(json.data.jobs));
+        return json.data.jobs;
+      }).catch((err) => {
+        console.log(err, '=======error====');
+      })
   }
 }
 

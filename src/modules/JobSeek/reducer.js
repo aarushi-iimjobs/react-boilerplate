@@ -1,22 +1,30 @@
 import filter from 'lodash/filter';
-import { REMOVE_JOB, FETCH_JOB_FEEDS } from './actions/action-types';
+import { REMOVE_JOB, FETCH_JOB_FEEDS, FETCH_JOB_FEEDS_SUCCESS } from './actions/action-types';
 
 const initialState = {
-  jobFeed: ''
+  jobFeed: '',
+  isJobLoading: false,
 };
 
 export default (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case REMOVE_JOB:
       return {
         ...state,
         jobFeed: filter(state.jobFeed, ({ id }) => id !== action.id),
       };
-    
+
     case FETCH_JOB_FEEDS:
       return {
         ...state,
-        jobFeed: action.payload.jobFeed
+        isJobLoading: true,
+      }
+
+    case FETCH_JOB_FEEDS_SUCCESS:
+      return {
+        ...state,
+        isJobLoading: false,
+        jobFeed: [...state.jobFeed, ...action.payload.jobFeed],
       }
 
     default:

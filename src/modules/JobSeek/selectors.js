@@ -6,3 +6,8 @@ export const getJobFeed = createSelector(
   getFeed,
   substate => substate.jobFeed,
 );
+
+export const getJobLoading = createSelector(
+  getFeed,
+  substate => substate.isJobLoading,
+)

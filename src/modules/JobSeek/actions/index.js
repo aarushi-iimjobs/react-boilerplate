@@ -1,13 +1,17 @@
-import { REMOVE_JOB, REMOVE_BANNER, FETCH_JOB_FEEDS } from './action-types';
+import { REMOVE_JOB, FETCH_JOB_FEEDS, FETCH_JOB_FEEDS_SUCCESS } from './action-types';
 
 export const removeJob = id => ({
   type: REMOVE_JOB,
   id,
 });
 
-export const fetchJobFeeds = (jobFeed) => ({
+export const fetchJobFeeds = () => ({
   type: FETCH_JOB_FEEDS,
+});
+
+export const fetchJobFeedsSuccess = jobFeed => ({
+  type: FETCH_JOB_FEEDS_SUCCESS,
   payload: {
-    jobFeed
+    jobFeed,
   }
 });

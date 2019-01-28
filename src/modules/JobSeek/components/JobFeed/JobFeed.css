@@ -63,16 +63,15 @@ option {
   height: 35px;
 }
 
-.filter a {
-  cursor: Pointer;
+.filterfull {
+  padding-left: 10px;
+  background-color: #f5f6f7;
+  line-height: 40px;
+  width: 119px;
 }
 
-.filter .selectBox-label {
-  float: left;
-  padding-right: 20px;
-  height: 22px;
-  overflow: hidden;
-  width: 90%!important;
+.filter a {
+  cursor: Pointer;
 }
 
 .divclicktxt .selectBox-label, .filter .selectBox-label {
@@ -90,15 +89,6 @@ option {
   background-position: 13px -9px;
   background-size: 20px;
   cursor: pointer;
-}
-
-.dd {
-  width: 150px;
-  display: inline-block;
-}
-
-.wd110 {
-  width: 110px;
 }
 
 .display-in {
@@ -120,20 +110,6 @@ filter {
 
 .mr10 {
   margin-right: 10px;
-}
-
-.greybtn {
-  background-color: #9b9b9b;
-  padding: 8px 30px;
-  color: #fff;
-  border: 0;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-.greybtn:hover {
-  background-color: #c5c3c3;
-  text-decoration: none;
 }
 
 input[type="submit"] {
@@ -170,57 +146,12 @@ input[type="submit"] {
   color: #4b4b4b;
 }
 
-.eachloc {
-  height: 27px;
-  line-height: 20px;
-  border-bottom: 1px solid #eee;
-  clear: both;
-  padding: 3px 0;
-  float: left;
-  width: 100%;
-}
-
-.lh21 {
-  line-height:21px;
-}
-
 .mrckbx {
   margin: 0 3px;
 }
 
-.eachloc label {
-  font-weight: 400;
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.relevance-dd {
-  width: 126px;
-  top: 111px;
-  left: 167.547px;
-  display: block;
-}
-
-.experience-dd {
-  width: 126px;
-  top: 111px;
-  left: 306px;
-  display: block;
-}
-
 a:hover {
   text-decoration: underline;
-}
-
-.selectBox-dropdown-menu {
-  position: absolute;
-  z-index: 99999;
-  max-height: 200px;
-  min-height: 1em;
-  border: solid 1px #BBB;
-  background: #FFF;
-  box-shadow: 0 2px 6px rgba(0,0,0,.2);
-  overflow: auto;
 }
 
 .selectBox-options li {
