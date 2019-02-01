@@ -4,6 +4,7 @@ import { REMOVE_JOB, FETCH_JOB_FEEDS, FETCH_JOB_FEEDS_SUCCESS } from './actions/
 const initialState = {
   jobFeed: '',
   isJobLoading: false,
+  hasMore: true,
 };
 
 export default (state = initialState, action) => {
@@ -25,6 +26,7 @@ export default (state = initialState, action) => {
         ...state,
         isJobLoading: false,
         jobFeed: [ ...state.jobFeed, ...action.payload.jobFeed ],
+        hasMore: action.payload.jobFeed.length >= 100,
       }
 
     default:

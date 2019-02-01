@@ -13,5 +13,5 @@ export const fetchJobFeedsSuccess = jobFeed => ({
   type: FETCH_JOB_FEEDS_SUCCESS,
   payload: {
     jobFeed,
-  }
+  },
 });

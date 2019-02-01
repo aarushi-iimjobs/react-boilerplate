@@ -10,4 +10,9 @@ export const getJobFeed = createSelector(
 export const getJobLoading = createSelector(
   getFeed,
   substate => substate.isJobLoading,
-)
+);
+
+export const hasMoreFeeds = createSelector(
+  getFeed,
+  substate => substate.hasMore,
+);

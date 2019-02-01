@@ -6,7 +6,7 @@ import throttle from 'lodash/throttle';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
-import { getJobFeed, getJobLoading } from '../../selectors';
+import { getJobFeed, getJobLoading, hasMoreFeeds } from '../../selectors';
 import { removeJob } from '../../actions';
 import './JobFeed.css';
 import Banner from '../Banner';
@@ -20,7 +20,7 @@ import SearchLocation from '../../../../components/SearchLocation';
 import {
   relevanceOptions,
   experienceOptions,
-  locationOptions
+  locationOptions,
 } from '../../../../models/dropdownOptions';
 
 const Wrapper = styled.div`
@@ -45,7 +45,8 @@ class JobFeed extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(getJobFeeds());
+    const { dispatch } = this.props;
+    dispatch(getJobFeeds(0));
     window.addEventListener('scroll', throttle(
       this.windowSizeHandler,
       throttleWaitTime,
@@ -61,12 +62,13 @@ class JobFeed extends Component {
     ));
   }
 
-  windowSizeHandler = e => {
+  windowSizeHandler = () => {
+    const { isLoading, hasMore, dispatch } = this.props;
     if (
       (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) &&
-      this.props.jobFeed.length < 90 && !this.props.isLoading
+      !isLoading && hasMore
     ) {
-      this.props.dispatch(getJobFeeds());
+      dispatch(getJobFeeds(1));
     }
   }
 
@@ -84,6 +86,11 @@ class JobFeed extends Component {
 
   render() {
     const { jobFeed, isLoading, removeJobFeed } = this.props;
+    const {
+      showRelevanceDropdown,
+      showExperienceDropdown,
+      showLocationDropdown,
+    } = this.state;
 
     return (
 
@@ -104,7 +111,7 @@ class JobFeed extends Component {
                       <option defaultValue="" value="https://www.iimjobs.com/jobfeed">By Date</option>
                     </Select>
                     <FilterBox label="By Date" />
-                    {this.state.showRelevanceDropdown &&
+                    {showRelevanceDropdown &&
                       <Dropdown options={relevanceOptions} />
                     }
                   </div>
@@ -119,7 +126,7 @@ class JobFeed extends Component {
                     <option value="5">15+ yrs</option>
                   </Select>
                   <FilterBox label="Any Exp. Level" />
-                  {this.state.showExperienceDropdown &&
+                  {showExperienceDropdown &&
                     <Dropdown options={experienceOptions} />
                   }
                 </div>
@@ -128,7 +135,7 @@ class JobFeed extends Component {
                   <div className="divmsdd" onClick={this.openLocationDropdown}>
                     <FilterBox label="Any Location" />
 
-                    {this.state.showLocationDropdown &&
+                    {showLocationDropdown &&
                       <SearchLocation options={locationOptions} />
                     }
                   </div>
@@ -149,10 +156,10 @@ class JobFeed extends Component {
               removeJob={() => removeJobFeed(job.id)}
               key={job.id}
               index={index}
-              premiumPost={parseInt(job.premium_post)}
+              premiumPost={job.premium}
               jobTitle={job.title}
-              jobLocation={job.location}
-              jobCreatedDate={job.published_date}
+              jobLocation={job.createdByAlias}
+              jobCreatedDate={job.createdTime}
             />
           ))}
           {isLoading && jobFeed.length
@@ -166,6 +173,7 @@ class JobFeed extends Component {
 const mapStateToProps = createStructuredSelector({
   isLoading: getJobLoading,
   jobFeed: getJobFeed,
+  hasMore: hasMoreFeeds,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -174,8 +182,10 @@ const mapDispatchToProps = dispatch => ({
 });
 
 JobFeed.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   jobFeed: PropTypes.array,
   isLoading: PropTypes.bool,
+  hasMore: PropTypes.bool,
   removeJobFeed: PropTypes.func.isRequired,
 };
 
