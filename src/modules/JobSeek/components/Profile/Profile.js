@@ -6,7 +6,7 @@ import GreyDivider from '../../../../components/GreyDivider';
 class Profile extends Component {
   render() {
     return (
-      <ul className={"profile-list about dropdown-menu"}>
+      <ul className={'profile-list about dropdown-menu'}>
         <li>
           <div className="profwidgetsect">
             <span className="posrel">

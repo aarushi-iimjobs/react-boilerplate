@@ -177,6 +177,7 @@ JobFeed.propTypes = {
   jobFeed: PropTypes.array,
   isLoading: PropTypes.bool,
   removeJobFeed: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(JobFeed);
