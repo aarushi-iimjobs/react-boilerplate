@@ -1,20 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Loadable from 'react-loadable';
-
-function Loading() {
-  return <h3>Loading...</h3>;
-}
-
-const JobFeed = Loadable({
-  loader: () => import('../components/JobFeed'),
-  loading: Loading,
-});
-
-const Learning = Loadable({
-  loader: () => import('../components/Learning'),
-  loading: Loading,
-})
 
 const JobFeedWrapper = styled.div`
 `;
@@ -29,8 +14,7 @@ const PageContentWrapper = styled.div`
 const JobSeek = () => (
   <JobFeedWrapper>
     <PageContentWrapper>
-      <JobFeed />
-      <Learning />
+      <h1>Welcome to React!</h1>
     </PageContentWrapper>
   </JobFeedWrapper>
 )

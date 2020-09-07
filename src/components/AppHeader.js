@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import './Header.css';
-import Categories from '../modules/JobSeek/components/Categories';
 
 const AppHeaderWrapper = styled.header`
   background-color: black;
@@ -11,12 +10,13 @@ const AppHeaderWrapper = styled.header`
   margin: 0px;
   display: flex;
   align-items: center;
+  color: white;
 `;
 
 const AppHeader = ({ push }) => (
   <AppHeaderWrapper>
     <div>
-      <Categories />
+      {'Hello'}
     </div>
   </AppHeaderWrapper>
 );

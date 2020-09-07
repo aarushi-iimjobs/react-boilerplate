@@ -15,10 +15,3 @@ export default function getJobFeeds() {
       })
   }
 }
-
-// export function getJobFeeds() {
-//   return function(dispatch) {
-//       dispatch(fetchJobFeeds(jobFeedData));
-//       return jobFeedData;
-//     }
-// }
