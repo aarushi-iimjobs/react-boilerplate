@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
+import HiristContainer from '../../modules/JobSeek/components/HiristContainer.js'
 import configureStore from '../../store';
 
 import RootWrapper from '../../components/RootWrapper';

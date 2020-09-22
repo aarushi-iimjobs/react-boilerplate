@@ -17,7 +17,11 @@ const AppHeader = ({ push }) => (
   <AppHeaderWrapper>
     <div>
       {'Hello'}
+      <div onClick={() => push('/jobfeed')}>
+        jobFeed
+      </div>
     </div>
+    <a href="/jobfeed">Click Jobfeed</a>
   </AppHeaderWrapper>
 );
 
